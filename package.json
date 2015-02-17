@@ -1,0 +1,21 @@
+{
+  "name": "hotlineThailand",
+  "version": "1.2.3",
+  "private": true,
+  "dependencies": {
+    "browserify": "~2.35.2",
+    "uglify-js": "~2.3.6"
+  },
+  "devDependencies": {
+    "watchify": "~0.1.0",
+    "tap": "~0.4.4"
+  },
+  "scripts": {
+    "build-js": "browserify app.js | uglifyjs -mc > bundle.js",
+    "build": "npm run build-js",
+    "watch-js": "watchify app.js -o bundle.js -dv",
+    "watch": "npm run watch-js",
+    "start": "node server.js",
+    "test": "tap test/*.js"
+  }
+}

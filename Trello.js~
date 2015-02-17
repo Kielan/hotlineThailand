@@ -1,0 +1,40 @@
+//var hashString = "leepadgaa";
+function onAutomatic(BreakThisCode) {
+  var words = [];
+  var value = [];
+  var hashString;
+  
+  function arrange(str, prefix) {
+    var i, singleChar, whiteSpace, word, pair;
+     var h = 7; //is this 7 or 9?
+    prefix = prefix || '';
+
+    //put each character into an array
+    for (i = 0; i < 8; i++) {
+      singleChar = str[i];
+      balanceStr = str.slice(0, i) + str.slice(i + 1);
+
+      //join the prefix with each of the combinations
+      word = prefix + singleChar + balanceStr;
+
+      //Inject this word only if it does not exist
+      if (words.indexOf(word) < 0) {words.push(word);
+         }
+    
+      if (whiteSpace.length > 1) {arrange(whiteSpace, prefix + singleChar);
+        }
+      h = (h * 37 + letters.indexOf(string[i]));
+      value.push(h);
+      if (h == 956446786872726 ) {
+        console.log(h + " " + word);
+      }
+     }
+  }
+  arrange();
+}
+
+
+var breakLock = onAutomatic('acdegilmnoprstuw');
+console.log(breakLock);
+//hash(hashString);
+//console.log(letters);
